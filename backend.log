@@ -1,0 +1,22 @@
+Loaded books: 6
+First book: {
+  id: 1,
+  title: 'The Seven Husbands of Evelyn Hugo',
+  author: 'Taylor Jenkins Reid',
+  rating: 4.9,
+  reviews: [
+    {
+      id: 101,
+      name: 'Alex',
+      comment: "Absolutely captivating! Couldn't put it down.",
+      rating: 5
+    },
+    {
+      id: 102,
+      name: 'Samantha',
+      comment: 'A masterpiece of storytelling!',
+      rating: 5
+    }
+  ]
+}
+Backend server is running on http://localhost:3002
