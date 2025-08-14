@@ -1,0 +1,64 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Seven Husbands of Evelyn Hugo",
+      "author": "Taylor Jenkins Reid",
+      "rating": 4.9,
+      "reviews": [
+        { "id": 101, "name": "Alex", "comment": "Absolutely captivating! Couldn't put it down.", "rating": 5 },
+        { "id": 102, "name": "Samantha", "comment": "A masterpiece of storytelling!", "rating": 5 }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Where the Crawdads Sing",
+      "author": "Delia Owens",
+      "rating": 4.7,
+      "reviews": [
+        { "id": 201, "name": "David", "comment": "Beautiful nature writing and compelling mystery.", "rating": 5 },
+        { "id": 202, "name": "Emily", "comment": "Emotional and atmospheric.", "rating": 4 }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "It Ends with Us",
+      "author": "Colleen Hoover",
+      "rating": 4.8,
+      "reviews": [
+        { "id": 301, "name": "Sarah", "comment": "Powerful and heart-wrenching story.", "rating": 5 },
+        { "id": 302, "name": "Michael", "comment": "Deals with difficult topics beautifully.", "rating": 4 }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "rating": 4.6,
+      "reviews": [
+        { "id": 401, "name": "Jessica", "comment": "Thought-provoking and uplifting.", "rating": 5 },
+        { "id": 402, "name": "Ryan", "comment": "Makes you appreciate life's possibilities.", "rating": 4 }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "rating": 4.9,
+      "reviews": [
+        { "id": 501, "name": "Maria", "comment": "Life-changing approach to building habits.", "rating": 5 },
+        { "id": 502, "name": "Tom", "comment": "Practical and easy to implement.", "rating": 5 }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "rating": 4.5,
+      "reviews": [
+        { "id": 601, "name": "Lisa", "comment": "Gripping psychological thriller!", "rating": 5 },
+        { "id": 602, "name": "Mark", "comment": "Unexpected twist at the end.", "rating": 4 }
+      ]
+    }
+  ]
+}
