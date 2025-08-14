@@ -12,13 +12,13 @@ const PORT = process.env.PORT || 3002;
 app.use(cors());
 app.use(express.json());
 
-// GET /books - List all books
-app.get('/books', (req, res) => {
+// GET /api/books - List all books
+app.get('/api/books', (req, res) => {
   res.json(books);
 });
 
-// GET /books/:id - Book details + reviews
-app.get('/books/:id', (req, res) => {
+// GET /api/books/:id - Book details + reviews
+app.get('/api/books/:id', (req, res) => {
   const bookId = parseInt(req.params.id);
   const book = books.find(b => b.id === bookId);
   if (book) {
@@ -28,8 +28,22 @@ app.get('/books/:id', (req, res) => {
   }
 });
 
-// POST /books/:id/reviews - Add a new review
-app.post('/books/:id/reviews', (req, res) => {
+// POST /api/books - Add a new book
+app.post('/api/books', (req, res) => {
+    const { title, author, rating } = req.body;
+    const newBook = {
+        id: books.length + 1,
+        title,
+        author,
+        rating,
+        reviews: []
+    };
+    books.push(newBook);
+    res.status(201).json(newBook);
+});
+
+// POST /api/books/:id/reviews - Add a new review
+app.post('/api/books/:id/reviews', (req, res) => {
   const bookId = parseInt(req.params.id);
   const { name, comment, rating } = req.body;
   const book = books.find(b => b.id === bookId);
@@ -48,8 +62,8 @@ app.post('/books/:id/reviews', (req, res) => {
   }
 });
 
-// PUT /books/:id/reviews/:reviewId - Edit a review
-app.put('/books/:id/reviews/:reviewId', (req, res) => {
+// PUT /api/books/:id/reviews/:reviewId - Edit a review
+app.put('/api/books/:id/reviews/:reviewId', (req, res) => {
   const bookId = parseInt(req.params.id);
   const reviewId = parseInt(req.params.reviewId);
   const { name, comment, rating } = req.body;
@@ -68,8 +82,8 @@ app.put('/books/:id/reviews/:reviewId', (req, res) => {
   }
 });
 
-// DELETE /books/:id/reviews/:reviewId - Delete a review
-app.delete('/books/:id/reviews/:reviewId', (req, res) => {
+// DELETE /api/books/:id/reviews/:reviewId - Delete a review
+app.delete('/api/books/:id/reviews/:reviewId', (req, res) => {
   const bookId = parseInt(req.params.id);
   const reviewId = parseInt(req.params.reviewId);
   const book = books.find(b => b.id === bookId);
